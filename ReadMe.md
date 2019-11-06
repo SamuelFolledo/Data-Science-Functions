@@ -11,15 +11,15 @@ This assignment will consist of two parts:
 
 ## Part 1
 
-**IMPORTANT NOTE:** in the video, the equation he uses has $n$ as the denominator, but when he calculates covariance values, he's using $n-1$ as the denominator. _For our purposes, we will be using $n-1$ as the denominator._
+**IMPORTANT NOTE:** in the video, the equation he uses has n as the denominator, but when he calculates covariance values, he's using n-1 as the denominator. _For our purposes, we will be using n-1 as the denominator._
 
 Watch this video on covariance matrices: https://www.youtube.com/watch?v=0GzMcUy7ZI0
 
 Mathematically, we can represent Covariance as such:
 
-$Cov(X,Y)=1/(n-1) \\sum_{i=1}^{n}(x[i] - \\bar{x})(y[i] - \\bar{y})$
+Cov(X,Y)=1/(n-1) \\sum_{i=1}^{n}(x[i] - \\bar{x})(y[i] - \\bar{y})
 
-Where $n$ is the number of elements in arrays $x$ and $y$
+Where n is the number of elements in arrays x and y
 
 ## Part 2
 
@@ -42,15 +42,15 @@ For example, assuming your covariance function is named `cov`, ensure that the f
 
 ### Hints
 
-1. Obtain the covariance between columns $x$ and $y$, between columns $x$ and $z$, and columns $y$ and $z$
-1. The covariance between columns $x$ and $y$ is the same as the covariance between columns $y$ and $x$. _We can generalize this for any two columns_
-1. Show that the covariance between columns $x$ and $x$ is equal to the variance of column $x$. _We can generalize this for any other column_
+1. Obtain the covariance between columns x and y, between columns x and z, and columns y and z
+1. The covariance between columns x and y is the same as the covariance between columns y and x. _We can generalize this for any two columns_
+1. Show that the covariance between columns x and x is equal to the variance of column x. _We can generalize this for any other column_
 
 # Requirements
 
 To pass this HW, you must meet the following requirements
 
-1. Your function should return the covariance between 6 pairs of random variables: $(X,Y), (X, Z), (Y, Z), (X, X), (Y, Y), and (Z, Z)$
+1. Your function should return the covariance between 6 pairs of random variables: (X,Y), (X, Z), (Y, Z), (X, X), (Y, Y), and (Z, Z)
 1. Verify that your function's return value is correct by using `np.cov(DATA)` where `DATA` is the return value of your covariance function
 1. Verify that your covariance function for each variable with itself returns the same value as `np.var` of that variable
 
