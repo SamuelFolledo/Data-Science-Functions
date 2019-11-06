@@ -1,5 +1,5 @@
-# Covariance Code
-This is my covariance code in Python, __without using numpy__ for my Data Science 1.0 course in Make School
+# Math Functions
+This is my Math functions like __mean, median, mode, covariance, percentile__ coded in Python, __without using numpy__ for my Data Science 1.0 course in Make School
 
 
 # [Instructions](https://github.com/Make-School-Courses/QL-1.1/blob/master/Assignments/HW1.ipynb)
