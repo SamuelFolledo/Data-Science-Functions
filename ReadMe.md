@@ -17,7 +17,7 @@ Watch this video on covariance matrices: https://www.youtube.com/watch?v=0GzMcUy
 
 Mathematically, we can represent Covariance as such:
 
-Cov(X,Y)=1/(n-1) \\sum_{i=1}^{n}(x[i] - \\bar{x})(y[i] - \\bar{y})
+`Cov(X,Y)=1/(n-1) \\sum_{i=1}^{n}(x[i] - \\bar{x})(y[i] - \\bar{y})`
 
 Where n is the number of elements in arrays x and y
 
@@ -38,7 +38,8 @@ Write a Python function that returns the covariance matrix for a given dataset, 
 
 Use [numpy's var function](https://docs.scipy.org/doc/numpy/reference/generated/numpy.var.html) to confirm that the covariance between a variable and itself is the same as the variance of the variable.
 
-For example, assuming your covariance function is named `cov`, ensure that the following is true: `cov(X, X) == np.var(X)`
+For example, assuming your covariance function is named `cov`, ensure that the following is true: 
+`cov(X, X) == np.var(X)`
 
 ### Hints
 
