@@ -38,9 +38,39 @@ def covariance(dataX, dataY):
     meanY = mean(dataY)
 
     total = 0
-    for i in range(len(dataX)):
-        total += (sortedX[i] - meanX) * (sortedY[i] - meanY)
-    total /= length
+    counter = 0
+    while counter < 2:
+        result.append([])
+        if counter == 0:
+            for i in range(len(dataX)): #cov(X,X)
+                total += (sortedX[i] - meanX) * (sortedX[i] - meanX)
+                if i == len(dataX)-1:
+                    total /= length
+                    result[counter].append(total)
+            total = 0
+            for i in range(len(dataX)): #cov(X,Y)
+                total += (sortedX[i] - meanX) * (sortedY[i] - meanY)
+                if i == len(dataX)-1:
+                    total /= length
+                    result[counter].append(total)
+            total = 0
+        elif counter == 1:
+            for i in range(len(dataX)): #cov(Y,X)
+                total += (sortedY[i] - meanY) * (sortedX[i] - meanX)
+                if i == len(dataX)-1:
+                    total /= length
+                    result[counter].append(total)
+            total = 0
+            for i in range(len(dataX)): #cov(Y,Y)
+                total += (sortedY[i] - meanY) * (sortedY[i] - meanY)
+                if i == len(dataX)-1:
+                    total /= length
+                    result[counter].append(total)
+            total = 0
+
+        counter += 1
+
+    # result [(i - meanX)*(j - meanY) for i, j in zip(sortedX,sortedY)]
 
     print(total)
 
