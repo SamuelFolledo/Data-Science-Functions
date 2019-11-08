@@ -1,4 +1,5 @@
 import math #needed for rounding up
+import numpy as np
 
 data = [1, 3, 5, 2, 3, 7, 8, 4, 10, 3, 3, 0, 6, 7, 3, 0, 3, 0, 5, 7, 10, 1, 4, 9]
 
@@ -36,7 +37,6 @@ def covariance(dataX, dataY):
     sortedY = sorted(dataY)
     meanX = mean(dataX)
     meanY = mean(dataY)
-
     total = 0
     counter = 0
     while counter < 2:
@@ -67,15 +67,18 @@ def covariance(dataX, dataY):
                     total /= length
                     result[counter].append(total)
             total = 0
-
         counter += 1
-
     # result [(i - meanX)*(j - meanY) for i, j in zip(sortedX,sortedY)]
-
-    print(total)
-
     print(result)
+    return result
 
+def cov_matrix_calculation(data):
+    # calculate covariance matrix of the data
+    cov_matx = np.cov(data.T)
+    return cov_matx
+
+dataset = np.array([[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]])
+print(cov_matrix_calculation(dataset))
 
 # print(f"Sorted Data = {sorted(data)}")
 # print(f"Sum = {sum(data)}")
@@ -84,6 +87,33 @@ def covariance(dataX, dataY):
 # print(f"Mean = {mean(data)}")
 # print(f"Median = {median(data)}")
 # print(f"Percentile = {percentile(data, 25)}")
+
 dataX = [1,2,3,4]
 dataY = [1,1,2,3]
-covariance(dataX, dataY)
+dataset2 = [[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]]
+
+
+def cov(dataset):
+    # for i in range(0, len(dataset)):
+    #     print(i)
+    # cov_matrix = (i*mean(dataset))
+    average = [float(sum(l))/len(l) for l in zip(*dataset)]
+    x = list(zip(*dataset))
+    y=[]
+    z=[]
+    
+    # for l in list(zip(*dataset)):
+        # print(l)
+        # x.append(l)
+    # final_results = [a+b for a, b in zip(dataset)]
+    
+    # print(x)
+        
+
+
+
+
+
+
+cov(dataset2)
+covariance(dataX,dataY)
