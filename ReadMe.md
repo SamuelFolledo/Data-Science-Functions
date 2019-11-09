@@ -20,5 +20,5 @@ __Covariance__ In probability theory and statistics, covariance is a measure of 
 
 <a name="probability"></a>
 ### [What is Probability?](https://github.com/Make-School-Courses/QL-1.1/blob/master/Notebooks/Probability.ipynb)
-Probability is all about the chances of an event occurring or how likely an event is to occur, in a set of events.
+Probability is all about the __chances of an event occurring__ or how likely an event is to occur, in a set of events.
 

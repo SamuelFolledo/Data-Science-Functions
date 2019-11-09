@@ -4,9 +4,12 @@
 ## [What is Probability?](https://github.com/Make-School-Courses/QL-1.1/blob/master/Notebooks/Probability.ipynb)
 Probability is all about the chances of an event occurring or how likely an event is to occur, in a set of events.
 
+
+
 ## [How to Interpret Probability](https://stattrek.com/probability/what-is-probability.aspx)
 Mathematically, the probability that an event will occur is expressed as a number between 0 and 1. Notationally, the probability of event A is represented by P(A).
 
+### KEY TAKEAWAYS
 - If P(A) equals zero, event A will almost definitely not occur.
 - If P(A) is close to zero, there is only a small chance that event A will occur.
 - If P(A) equals 0.5, there is a 50-50 chance that event A will occur.
@@ -14,16 +17,12 @@ Mathematically, the probability that an event will occur is expressed as a numbe
 - If P(A) equals one, event A will almost definitely occur.
 - In a statistical experiment, the sum of probabilities for all possible outcomes is equal to one. This means, for example, that if an experiment can have three possible outcomes (A, B, and C), then P(A) + P(B) + P(C) = 1.
 
-
-
-# [HW2 - Probability Instructions](https://github.com/Make-School-Courses/QL-1.1/blob/master/Assignments/HW2.ipynb):
+## [HW2 - Probability Instructions](https://github.com/Make-School-Courses/QL-1.1/blob/master/Assignments/HW2.ipynb):
 
 In this assignment, we will calculate the chance of getting a specific outcome from probabilistic events on piece of paper and then write a function to verify that our paper calculations are correct.
 
-## Problem To Solve 
-
+### Problem To Solve 
 We have a coin that we want to flip. We know the following about the coin:
-
 - The probability of getting a 'Head' is P(H) = a
 - The probability of getting a 'Tail' is P(T) = 1 - a
 
@@ -31,14 +30,14 @@ a can be any decimal number between 0 and 1. For example, if a = 0.5, then it is
 
 **Given the above probabilities for P(H) and P(T), if we toss this coin three times, what is the probability that we get some combination of two heads and one tail?**
 
-## Part 1 - Paper Calculation
+### Part 1 - Paper Calculation
 
 Calculate this probability on a piece of paper. Show your answer in terms of a
 
 _Make sure to show your work, and when you're finished, take a picture to upload to your GitHub repo_
 
 
-## Part 2
+### Part 2
 
 Write a function `verify_head` that we will use to verify if your paper solution is correct. Your function should have two parameters: 
     
@@ -48,7 +47,7 @@ Write a function `verify_head` that we will use to verify if your paper solution
 **Your function should then return the probability (float) of tossing a coin `num_flips` times and getting some combination of two heads and one tail, given that we know the probability of getting a heads is `prob_head`**
 
 
-## Requirements
+### Requirements
 
 To pass this assignment, you must fulfuill the following requirements:
 
@@ -58,12 +57,12 @@ To pass this assignment, you must fulfuill the following requirements:
     1. Note that your return value may differ slightly from the hand-calculated value, but they should be at least the same for the first 1-2 decimals if you use a `num_flips` value between 1000-2000
 
 
-## Turning In Your HW
+### Turning In Your HW
 
 Once you have finished your assignment, provide a link to your repo on GitHub and place the link in the appropriate HW2 column in the progress tracker. See the syllabus for more details on submission links
 
 
-## Hints: 
+### Hints: 
 
 - Using a `num_flips` of 1000 (or higher!) is a good test number, as the probability will better align with what you get in your hand-calculated value
 - For Part 2, we can generate events with given probabilities as follows. Think about how you could use this for your function:
