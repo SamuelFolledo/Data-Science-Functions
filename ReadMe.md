@@ -2,7 +2,7 @@
 This is my Math functions like __mean, median, mode, covariance, percentile__ coded in Python, __without using numpy__ for my Data Science 1.0 course in Make School
 
 ## My Covariance Matrix Code
-<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/result.png" width="1000" height="1000">
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/result.png" width="500" height="500">
 
 
 
