@@ -4,7 +4,7 @@ This is Samuel P. Folledo's Data Science functions like __mean, median, mode, pe
 ## 📖 Table of Contents
 1. [HW 1: Covariance](#covariance)
 2. [HW 2: Probability](#probability)
-3. [HW 3: N/A](#)
+3. [HW 3: Compute R-Squared and plot histogram of error for regression problem](#rSquaredAndHistogram)
 
 <a name="covariance"></a>
 ## Covariance 
