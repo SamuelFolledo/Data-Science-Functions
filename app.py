@@ -30,7 +30,7 @@ def percentile(data, percent):
     roundedUpIndex = math.ceil(index)
     return sortedData[roundedUpIndex-1]
 
-def covariance(dataX, dataY):
+def covariance_first_attempt(dataX, dataY):
     result = []
     length = len(dataX) - 1
     sortedX = sorted(dataX)
@@ -80,20 +80,24 @@ def cov_matrix_calculation(data):
 dataset = np.array([[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]])
 print(cov_matrix_calculation(dataset))
 
-# print(f"Sorted Data = {sorted(data)}")
-# print(f"Sum = {sum(data)}")
-# print(f"Length = {len(x_list)}")
-
-# print(f"Mean = {mean(data)}")
-# print(f"Median = {median(data)}")
-# print(f"Percentile = {percentile(data, 25)}")
 
 dataX = [1,2,3,4]
 dataY = [1,1,2,3]
 dataset2 = [[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]]
 
+def covariance(x,y):
+    total = 0
+    for i in range(len(x)):
+        value1 = x[i] - mean(x)
+        value2 = y[i] - mean(y)
+        multiplication_value = value1 * value2
+        total += multiplication_value
+    covar = total/(len(x) - 1)
+    return covar
 
-def cov(dataset):
+print(covariance(dataX, dataY))
+
+def practices(dataset):
     # for i in range(0, len(dataset)):
     #     print(i)
     # cov_matrix = (i*mean(dataset))
@@ -109,11 +113,3 @@ def cov(dataset):
     
     # print(x)
         
-
-
-
-
-
-
-cov(dataset2)
-covariance(dataX,dataY)
