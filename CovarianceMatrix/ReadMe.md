@@ -4,6 +4,9 @@ This method takes in a 2-dimensional array of any size in x or y and returns the
 
 <img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/covariance.png" width="800" height="800">
 
+## Covariance in Pen and Paper
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/covariance_sample.jpg" width="800" height="800">
+
 ## What Is Covariance?
 __Covariance__ In probability theory and statistics, covariance is a measure of the joint variability of two random variables. Covariance measures the directional relationship between the returns on two assets. A positive covariance means that asset returns move together while a negative covariance means they move inversely. Covariance is calculated by analyzing at-return surprises (standard deviations from the expected return) or by multiplying the correlation between the two variables by the standard deviation of each variable.
 
@@ -13,7 +16,6 @@ __Covariance__ In probability theory and statistics, covariance is a measure of 
 - Covariance is a significant tool in modern portfolio theory used to ascertain what securities to put in a portfolio.
 - Risk and volatility can be reduced in a portfolio by pairing assets that have a negative covariance.
 
-====
 
 # [Instructions](https://github.com/Make-School-Courses/QL-1.1/blob/master/Assignments/HW1.ipynb)
 ## HW1 - Covariance Matrix
