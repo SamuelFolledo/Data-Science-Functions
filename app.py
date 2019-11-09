@@ -8,6 +8,7 @@ y_list = [1.7,2.76,2.09,3.19,1.694,1.573,3.366,2.596,2.53,1.221,2.827,3.465,1.65
 def mean(list): #get average
     return(float(sum(list)) / len(list))
 
+################################ NUMPY's MATRIX COVARIANCE ####################################
 def cov_matrix_calculation(data): # calculate covariance matrix of the data
     cov_matx = np.cov(data.T)
     return cov_matx
@@ -15,38 +16,34 @@ def cov_matrix_calculation(data): # calculate covariance matrix of the data
 dataset = np.array([[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]])
 print(cov_matrix_calculation(dataset))
 
-dataX = [1,2,3,4]
-dataY = [1,1,2,3]
-dataset2 = [[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]]
+################################################################################################
+dataset2 = [[1, 1, 1], 
+            [1, 2, 1], 
+            [1, 3, 2], 
+            [1, 4, 3]]
 
-def covariance(x,y):
+def covariance(x,y): #given two array, return the covariance
     n = len(x)
     if n <= 0 or n != len(y):
         return
     xy = [((x[i]-mean(x))*(y[i]-mean(y))) for i in range(n)]
     return float(sum(xy))/float(n-1)
 
+################################ MY MATRIX COVARIANCE ################################################
+def covariance_matrix(dataset): #covariance function that takes a matrix and returns a covariance as a matrix
+    xyz_list = list(zip(*dataset)) #if dataset is THEN result is [(1, 1, 1, 1), (1, 2, 3, 4), (1, 1, 2, 3)]
+    cov_matrix = []
+    for index in range(len(dataset)-1):
+        cov_matrix.append([])
+        for i in range(len(dataset[index])): # i = 0,1,2
+            cov_y_z = covariance(xyz_list[index], xyz_list[i])
+            # print(f"index {index} -- i {i} == {xyz_list[index]} ,  {xyz_list[i]} === {cov_y_z}")
+            cov_matrix[index].append(cov_y_z)
+    return cov_matrix
 
-# print(covariance(dataX, dataY))
-
-
-def covariance_final_attempt(dataset): #covariance function that takes a matrix and returns a covariance as a matrix
-    average_of_column = [float(sum(l))/len(l) for l in zip(*dataset)] #[1.0, 2.5, 1.75] // zip(*dataset) = unzip // returns average of the columns in a 2D array 
-    xyz_list = list(zip(*dataset)) #[(1, 1, 1, 1), (1, 2, 3, 4), (1, 1, 2, 3)]
-    # print(average_of_column)
-    # print(xyz_list)
-    xy_list = [(1, 1), (2, 1), (3, 2), (4, 3)]
-    summ = [sum(arr) for arr in zip(*xy_list)]
-    print(summ)
-
-
-
-
-
-covariance_final_attempt(dataset2)
-
-
-
+covariance_matrix_result = covariance_matrix(dataset2)
+for result in covariance_matrix_result:
+    print(result)
 
 
 
@@ -68,20 +65,23 @@ def practices(dataset):
     # for i in range(0, len(dataset)):
     #     print(i)
     # cov_matrix = (i*mean(dataset))
-    average_of_column = [float(sum(l))/len(l) for l in zip(*dataset)] #[1.0, 2.5, 1.75] // zip(*dataset) = unzip // returns average of the columns in a 2D array 
-    xyz_list = list(zip(*dataset)) #[(1, 1, 1, 1), (1, 2, 3, 4), (1, 1, 2, 3)]
+    average_of_column = [float(sum(column_tuple))/len(column_tuple) for column_tuple in zip(*dataset)] #[1.0, 2.5, 1.75] // zip(*dataset) = unzip // returns average of the columns in a 2D array 
+    xyz_list = list(zip(*dataset)) #if dataset is THEN result is [(1, 1, 1, 1), (1, 2, 3, 4), (1, 1, 2, 3)]
     summ = [sum(arr) for arr in xyz_list] # [4, 10, 7]
     
     xy_list = [(1, 1), (2, 1), (3, 2), (4, 3)]
     summ = [sum(arr) for arr in xy_list] #[2, 3, 5, 7] //sum of rows 
     summ = [sum(arr) for arr in zip(*xy_list)] #10,7 #sum of columns
 
+    [data[index]-mean(data) for index in range(len(data))] # if argument is [1,2,3,4] THEN result is [-1.5, -0.5, 0.5, 1.5]
     # for l in list(zip(*dataset)):
         # print(l)
         # x.append(l)
     # final_results = [a+b for a, b in zip(dataset)]
-    
     # print(x)
+
+def index_minus_average(data): #function that takes an array and returns a list of data[i] - average of data
+    return [data[index]-mean(data) for index in range(len(data))] # if argument is [1,2,3,4] THEN result is [-1.5, -0.5, 0.5, 1.5]
         
 def median(list):
     length = len(list)
