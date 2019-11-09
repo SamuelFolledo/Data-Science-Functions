@@ -33,14 +33,15 @@ def covariance(x,y): #given two array, return the covariance
 def covariance_matrix(dataset): #covariance function that takes a matrix and returns a covariance as a matrix
     xyz_list = list(zip(*dataset)) #if dataset is THEN result is [(1, 1, 1, 1), (1, 2, 3, 4), (1, 1, 2, 3)]
     cov_matrix = []
-    for index in range(len(dataset)-1):
+    for y in range(len(dataset[0])):
         cov_matrix.append([])
-        for i in range(len(dataset[index])): # i = 0,1,2
-            cov_y_z = covariance(xyz_list[index], xyz_list[i])
-            # print(f"index {index} -- i {i} == {xyz_list[index]} ,  {xyz_list[i]} === {cov_y_z}")
-            cov_matrix[index].append(cov_y_z)
+        for x in range(len(dataset[y])): # i = 0,1,2
+            cov_result = covariance(xyz_list[y], xyz_list[x])
+            # print(f"y {y} -- x {x} == {xyz_list[y]} ,  {xyz_list[x]} === {cov_result}")
+            cov_matrix[y].append(cov_result)
     return cov_matrix
 
+################################################ PRINT ################################################
 covariance_matrix_result = covariance_matrix(dataset2)
 for result in covariance_matrix_result:
     print(result)
@@ -60,7 +61,7 @@ for result in covariance_matrix_result:
 
 
 
-############################### PRACTICES ################################################
+############################### PRACTICES - ignore these ################################################
 def practices(dataset):
     # for i in range(0, len(dataset)):
     #     print(i)
