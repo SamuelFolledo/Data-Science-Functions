@@ -2,9 +2,9 @@
 This is Samuel P. Folledo's Data Science functions like __mean, median, mode, percentile, covariance, probability__ programmed in Python, __without using numpy__ as a homework assigned in my Data Science 1.0 course in Make School
 
 ## 📖 Table of Contents
-1. [HW 1: Covariance](#covariance):
-2. [HW 2: Probability](#probability):
-3. [HW 3: N/A](#):
+1. [HW 1: Covariance](#covariance)
+2. [HW 2: Probability](#probability)
+3. [HW 3: N/A](#)
 
 <a name="covariance"></a>
 ## Covariance 
