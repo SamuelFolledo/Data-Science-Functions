@@ -14,5 +14,3 @@ __Covariance__ In probability theory and statistics, covariance is a measure of 
 - Risk and volatility can be reduced in a portfolio by pairing assets that have a negative covariance.
 
 <img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/covariance.png" width="800" height="800">
-
-====
