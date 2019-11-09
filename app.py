@@ -14,7 +14,7 @@ def cov_matrix_calculation(data): # calculate covariance matrix of the data
     return cov_matx
 
 dataset = np.array([[1, 1, 1], [1, 2, 1], [1, 3, 2], [1, 4, 3]])
-print(cov_matrix_calculation(dataset))
+print(f"Numpy's Matrix Solution =\n{cov_matrix_calculation(dataset)}")
 
 ################################################################################################
 dataset2 = [[1, 1, 1], 
@@ -43,6 +43,7 @@ def covariance_matrix(dataset): #covariance function that takes a matrix and ret
 
 ################################################ PRINT ################################################
 covariance_matrix_result = covariance_matrix(dataset2)
+print("My Covariance Matrix Solution =")
 for result in covariance_matrix_result:
     print(result)
 
