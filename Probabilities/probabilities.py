@@ -12,7 +12,7 @@ results = []
 for _ in range(3):
     result = choices(event, weights)[0] #choices() Return a k sized list of population elements chosen with replacement. If the relative weights or cumulative weights are not specified, the selections are made with equal probability.
     results.append(result)
-print(results)
+
 
 
 # Look at the below print statement.
@@ -23,25 +23,20 @@ print(results)
 
 def coin_probability(coin_fairness, turns):
     event = ['H', 'T']
-    weights = [coin_fairness, abs(1-coin_fairness)]
+    weights = [coin_fairness, abs(1-coin_fairness)] #[0:P(H), 1:P(T)]
     results = []
     count = 0
-    for turn in range(turns):
-        result = choices(event, weights=weights, k=3) #append the combination
-        results.append(result)
-
-    for result in results:
-        possibility_one = ["H","H","T"]
-        possibility_two = ["H","T","H"]
-        possibility_three = ["T","H","H"]
-        if result == possibility_one or result == possibility_two or result == possibility_three:
+    for _ in range(turns):
+        result = choices(event, weights=weights, k=3) #k flips the coin 3x each turn
+        results.append(result) #so we can check the result
+        possible_results = [["H","H","T"], ["H","T","H"], ["T","H","H"]]
+        if result in possible_results: #compare with accepted results
             count+=1
-    print(results)
-    print(count/turns)
+    return count/turns
 
 
 
-print(coin_probability(0.5,5))
+print(coin_probability(0.1,10))
 
 
 '''
