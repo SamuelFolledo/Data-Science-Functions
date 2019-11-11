@@ -10,14 +10,39 @@ weights = [0.5, 0.5]
 
 results = []
 for _ in range(3):
-    result = choices(event, weights) #choices() Return a k sized list of population elements chosen with replacement. If the relative weights or cumulative weights are not specified, the selections are made with equal probability.
+    result = choices(event, weights)[0] #choices() Return a k sized list of population elements chosen with replacement. If the relative weights or cumulative weights are not specified, the selections are made with equal probability.
     results.append(result)
 print(results)
+
+
 # Look at the below print statement.
 # The number of Heads should be roughly 30%
 # and the number of Tails should be roughly 70%
 # You can change the range above to get more values,
 # and see the percentage increase
+
+def coin_probability(coin_fairness, turns):
+    event = ['H', 'T']
+    weights = [coin_fairness, abs(1-coin_fairness)]
+    results = []
+    count = 0
+    for turn in range(turns):
+        result = choices(event, weights=weights, k=3) #append the combination
+        results.append(result)
+
+    for result in results:
+        possibility_one = ["H","H","T"]
+        possibility_two = ["H","T","H"]
+        possibility_three = ["T","H","H"]
+        if result == possibility_one or result == possibility_two or result == possibility_three:
+            count+=1
+    print(results)
+    print(count/turns)
+
+
+
+print(coin_probability(0.5,5))
+
 
 '''
 choices()
