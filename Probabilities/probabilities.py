@@ -34,8 +34,6 @@ def coin_probability(coin_fairness, turns):
             count+=1
     return count/turns
 
-
-
 print(coin_probability(0.1,10))
 
 

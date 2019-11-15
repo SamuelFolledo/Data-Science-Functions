@@ -37,6 +37,9 @@ Calculate this probability on a piece of paper. Show your answer in terms of a
 _Make sure to show your work, and when you're finished, take a picture to upload to your GitHub repo_
 
 
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/probability.jpg" width="800" height="800">
+
+
 ### Part 2
 
 Write a function `verify_head` that we will use to verify if your paper solution is correct. Your function should have two parameters: 
