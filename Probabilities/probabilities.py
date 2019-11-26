@@ -1,5 +1,6 @@
 
 from random import choices
+import random
 import numpy as np
 
 event = ['H', 'T']
@@ -60,3 +61,106 @@ def randint(low, high=None, size=None, dtype='l')
 Return random integers from low (inclusive) to high (exclusive).
 Return random integers from the "discrete uniform" distribution of the specified dtype in the "half-open" interval [low, high). If high is None (the default), then results are from [0, low).
 '''
+
+
+students = [
+    "Elaine Music",
+    "Abhishek Kulkarni",
+    "Aleia Knight",
+    "Alex Barksdale",
+    "Alex Gray",
+    "Anas Bellouzi",
+    "Anastasia Gallardo",
+    "Andrew Reyes",
+    "Andrey Novichkov",
+    "Angelina Olmedo",
+    "Ashab Siddiqui",
+    "Audi Blades",
+    "Beck Haywood",
+    "Ben Lafferty",
+    "Ben Simpson",
+    "Brandon Christoffer",
+    "Christian Galkowski",
+    "Dahveyea Cowan",
+    "David Evans",
+    "Deer Brinkley",
+    "Diyar Kudrat",
+    "Donald Vallejo",
+    "Farhan Begg",
+    "Francis Tsang",
+    "Franklin Phan",
+    "Gabriel Lee",
+    "George Aoyagi",
+    "Gideon Crawley",
+    "Gonzo Birrueta",
+    "Ike Holzmann",
+    "Jack Katzer",
+    "Jarquevious Nelson",
+    "Jerome Schmidt",
+    "Joey Gaitan",
+    "John Montejano",
+    "Jon Infante",
+    "Jorge Gallegos",
+    "Jose Arellanes Aldaco",
+    "Kabsa Abdi",
+    "Kento Murata",
+    "Kevin Meyers",
+    "Konstantin Kishinsky",
+    "Louis Dweck",
+    "Mario McGee",
+    "Mark Kim",
+    "Max Finn",
+    "Mohammed Drame",
+    "Mondale Felix",
+    "Muhammad Tifak",
+    "Nick Kearns",
+    "NYEIN CHAN AUNG",
+    "OMAR SAGOO",
+    "Parker Paisley",
+    "Pasang Lama Tamang",
+    "Patrick Kelly",
+    "Ryan Hopkins",
+    "Samir Ingle",
+    "Samuel Folledo",
+    "Sebastian Abarca",
+    "Shaan Hurley",
+    "Shane Austrie",
+    "Subal Pant",
+    "Tasfia Addrita",
+    "Tristan Fossan",
+    "Tyler Holland",
+    "Wyatt Happ",
+    "Youssef Sawiris",
+    "Zain Raza",
+    "Abdulla Noori",
+    "Arvin Seifipour",
+    "Chudier Chuol",
+    "Constantino",
+    "Daniel Duque",
+    "Fritz Heider",
+    "Gary Frederick",
+    "Hassan El-Amin",
+    "Henry Calderon",
+    "Jason McGee",
+    "Javier Mendoza",
+    "Jeric Hunter",
+    "Joanelly Cruz",
+    "Kaniet Oskonbaev",
+    "Liya Tilahun",
+    "Luke Parker",
+    "Mark Pham",
+    "Vladyslav Nykoliuk",
+]
+
+
+def pop_random(lst):
+    idx = random.randrange(0, len(lst))
+    return lst.pop(idx)
+
+pairs = []
+while students:
+    rand1 = pop_random(students)
+    rand2 = pop_random(students)
+    pair = rand1, rand2
+    pairs.append(pair)
+print(pairs)
