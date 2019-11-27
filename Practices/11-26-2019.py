@@ -57,6 +57,11 @@ def get_y_pred(a, w1, w0): #my solution
     return [(w1*num+w0) for num in a]
 print(get_y_pred(a,0.5,1))
 
-
-
 ################################################################################
+# 6) Show x[i]y[i] = x_y_bar is not equals to x_bar*y_bar
+def get_x_y_bar(x,y):
+    x_bar = np.mean(x)
+    y_bar = np.mean(y)
+    print(x_bar)
+    return sum([(i*j) for i,j in zip(x,y)])
+print(get_x_y_bar(a,b))
