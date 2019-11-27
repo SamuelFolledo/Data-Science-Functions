@@ -1,0 +1,1 @@
+https://github.com/Make-School-Courses/QL-1.1/blob/master/Assignments/HW3.ipynb
