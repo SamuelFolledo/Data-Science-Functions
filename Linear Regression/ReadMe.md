@@ -14,10 +14,9 @@ It is a statistic used in the context of statistical models whose main purpose i
     R^2 = 1 - (SSres / SStot)
     ```
 
-Coefficient of determination. The coefficient of determination (R2) for a linear regression model with one independent variable is:
+- Or, Coefficient of determination. The coefficient of determination (R2) for a linear regression model with one independent variable is:
 
 `R^2 = { ( 1 / N ) * Σ [ (xi - x) * (yi - y) ] / (σx * σy ) }2`
-
 where N is the number of observations used to fit the model, Σ is the summation symbol, xi is the x value for observation i, x is the mean x value, yi is the y value for observation i, y is the mean y value, σx is the standard deviation of x, and σy is the standard deviation of y.
 
 
