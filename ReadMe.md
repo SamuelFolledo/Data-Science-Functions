@@ -2,9 +2,9 @@
 This is Samuel P. Folledo's Data Science functions like __mean, median, mode, percentile, covariance, probability__ programmed in Python, __without using numpy__ as a homework assigned in my Data Science 1.0 course in Make School
 
 ## 📖 Table of Contents
-1. [HW 1: Covariance](#covariance)
-2. [HW 2: Probability](#probability)
-3. [HW 3: Compute R-Squared and plot histogram of error for regression problem](#rSquaredAndHistogram)
+1. [HW 1: Covariance](https://github.com/SamuelFolledo/Data-Science-Functions/tree/master/CovarianceMatrix)
+2. [HW 2: Probability](https://github.com/SamuelFolledo/Data-Science-Functions/tree/master/Probabilities)
+3. [HW 3: Compute Coefficient of Determination (a.k.a. R-Squared) for Linear Regression](https://github.com/SamuelFolledo/Data-Science-Functions/tree/master/Linear%20Regression)
 
 <a name="covariance"></a>
 ## Covariance 
