@@ -4,7 +4,7 @@ __Coefficient of Determination__ is the proportion of the variance in the depend
 It is a statistic used in the context of statistical models whose main purpose is either the prediction of future outcomes or the testing of hypotheses, on the basis of other related information. It provides a measure of how well observed outcomes are replicated by the model, based on the proportion of total variation of outcomes explained by the model
 
 ## My Solution
-<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/r-squared.jpg" width="900" height="600">
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/r-squared.png" width="900" height="600">
 
 ## Notes
 - fi = Ypred[i]
