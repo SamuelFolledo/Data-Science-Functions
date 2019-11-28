@@ -8,7 +8,7 @@ It is a statistic used in the context of statistical models whose main purpose i
 - ```SStot = sum((Yi - mean(Y))^2)``` __total sum of squares__ - proportional to the [variance](https://en.wikipedia.org/wiki/Variance) of the data;
     - also known as __sum of squared residuals (SSR)__ or __(SSE)__ is a quantity that appears as part of a standard way of presenting results of such analyses. It is defined as being the sum, over all observations, of the squared differences between the observations and their overall mean
 - ```SSreg = sum((Ypred[i] - mean(Y))^2)``` __regression sum of squares__ - also called the [explained sum of squares](https://en.wikipedia.org/wiki/Explained_sum_of_squares), is a quantity used in describing how well a model represents the data being modelle
-- ```SStot = sum((Yi - Ypred[i])^2)``` __sum of squares of residuals__ - also called the [residual sum of squares](https://en.wikipedia.org/wiki/Residual_sum_of_squares), is the sum of the squares of residuals (deviations predicted from actual empirical values of data). It is a measure of the discrepancy between the data and an estimation model. 
+- ```SSres = sum((Yi - Ypred[i])^2)``` __sum of squares of residuals__ - also called the [residual sum of squares](https://en.wikipedia.org/wiki/Residual_sum_of_squares), is the sum of the squares of residuals (deviations predicted from actual empirical values of data). It is a measure of the discrepancy between the data and an estimation model. 
 - R-Squared or definition of the __coefficient of determination__ is:
     ```
     R^2 = 1 - (SSres / SStot)
