@@ -27,11 +27,14 @@ plt.plot(x, y_pred, 'ro-')
     # - w_1 (weight: float)
 # and will return the R-squared value
 
+# SS_res = sum((y[i] - f[i])**2)
+# SS_tot = ...
+
 def r_sq(y, x, w1, w0):
     y_bar  = np.mean(y)
-    y_pred = ...
-    SS_res = ...
-    SS_tot = ...
+    y_pred = [w1*num+w0 for num in x]
+    SS_res = sum([(y_element - f_element)**2 for y_element,f_element in zip(y,y_pred)])
+    SS_tot = sum([(y_element - y_bar)**2 for y_element in y])
     return 1- SS_res/SS_tot
 
 print(r_sq(y, x, 0.25163494, 0.79880123))
