@@ -1,6 +1,6 @@
 # Final Project
 
-## [Instructions]()
+## [Instructions](https://github.com/Make-School-Courses/QL-1.1/blob/master/Final_Project/Final_Project.ipynb)
 
 ## Final Project: Linear Regression
 	•	We want to present the relationship between (two) variables linearly 
