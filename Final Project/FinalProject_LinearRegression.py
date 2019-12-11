@@ -32,3 +32,19 @@ def min_sq_error(y, x, w1, w0): #w1 = slope && w0 = intercept
 
 print(f'Mean Squared Error of (y, x, 0.7, 0.3) = {min_sq_error(y, x, 0.7, 0.3)}')
 print(f'Mean Squared Error of (y, x, 0.25163494, 0.79880123) = {min_sq_error(y, x, 0.25163494, 0.79880123)}')
+
+def get_mean(arr):
+    return sum([i for i in arr]) / len(arr)
+
+#Question 3
+def slope_intercept_LR(x, y):
+    x_bar = get_mean(x)
+    y_bar = get_mean(y)
+    x_y_bar = sum([(i*j) for i,j in zip(x,y)]) / len(x)
+    x_squared_bar = sum([i**2 for i in x]) / len(x)
+    x_bar_squared = x_bar**2
+    w1 = (x_y_bar - y_bar*x_bar) / (x_squared_bar - x_bar_squared)
+    w0 = y_bar - w1*x_bar
+    return w1, w0
+
+print(slope_intercept_LR(x, y))
