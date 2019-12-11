@@ -24,4 +24,9 @@ Probability is all about the __chances of an event occurring__ or how likely an 
 
 ## Final Project Linear Regression - Given two list, obtain line that best fit
 In statistics, __[linear regression](https://en.wikipedia.org/wiki/Linear_regression)__ is a linear approach to modeling the relationship between a scalar response (or __[dependent variable](https://en.wikipedia.org/wiki/Dependent_and_independent_variables))__ and one or more explanatory variables (or __[independent variables](https://en.wikipedia.org/wiki/Dependent_and_independent_variables)__).
-<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/bestLineCode.png" width="727" height="1276">
+
+### Solution
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/bestLineCode.png" width="1120" height="900">
+
+### Mean Squared Error in paper
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/bestLine.jpg" width="727" height="1276">
