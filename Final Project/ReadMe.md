@@ -27,11 +27,8 @@ print(min_sq_error(y, x, 0.25163494, 0.79880123))
 
 ### Question 2: Obtain the best line (Coding is not required)
 	•	In order the best line, we want to obtain which slope (￼) and intercept (￼) minimize the mean-square-error (MSE) 
-
-￼
 	•	For this part, you need to use partial derivative and you use derivative table 
 	•	For this part, write down the steps and the solution on a paper
-
 
 
 ### Question 3: Write a code to return the slope and intercept with given list x and y
@@ -44,16 +41,11 @@ def slope_intercept_LR(x, y):
 
 print(slope_intercept_LR(x, y))
 
-
-
-
 ### Question 4: After obtain the best line, obtain the variance and mean of error
 	•	In Question 3, we have obtained the best line
 	•	So, we can error list which its element is: ￼
 	•	Write a function that calculate variance and mean of list ￼
 	•	Plot the distribution of the error for optimal line
-
-
 
 
 ### Question 5: (Optional but Bonus point) In almost all applications, we update the slope and intercept through iteration
