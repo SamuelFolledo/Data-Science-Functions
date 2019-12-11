@@ -30,6 +30,7 @@ print(min_sq_error(y, x, 0.25163494, 0.79880123))
 	•	For this part, you need to use partial derivative and you use derivative table 
 	•	For this part, write down the steps and the solution on a paper
 
+<img src="https://github.com/SamuelFolledo/Math-Functions/blob/master/screenshots/bestLine.jpg" width="727" height="1276">
 
 ### Question 3: Write a code to return the slope and intercept with given list x and y
 	
