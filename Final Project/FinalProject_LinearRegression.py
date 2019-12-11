@@ -30,14 +30,14 @@ def min_sq_error(y, x, w1, w0): #w1 = slope && w0 = intercept
     mse = sum_squared_error/N
     return mse
 
-print(f'Mean Squared Error of (y, x, 0.7, 0.3) = {min_sq_error(y, x, 0.7, 0.3)}')
-print(f'Mean Squared Error of (y, x, 0.25163494, 0.79880123) = {min_sq_error(y, x, 0.25163494, 0.79880123)}')
+# print(f'Mean Squared Error of (y, x, 0.7, 0.3) = {min_sq_error(y, x, 0.7, 0.3)}')
+# print(f'Mean Squared Error of (y, x, 0.25163494, 0.79880123) = {min_sq_error(y, x, 0.25163494, 0.79880123)}')
 
 def get_mean(arr):
     return sum([i for i in arr]) / len(arr)
 
 #Question 3
-def slope_intercept_LR(x, y):
+def slope_intercept_LR(x, y): #method which obtains the best line
     x_bar = get_mean(x)
     y_bar = get_mean(y)
     x_y_bar = sum([(i*j) for i,j in zip(x,y)]) / len(x)
@@ -48,3 +48,7 @@ def slope_intercept_LR(x, y):
     return w1, w0
 
 print(slope_intercept_LR(x, y))
+
+#Question 4
+y_variance = sum([(i - get_mean(y))**2 for i in y]) / len(y)
+print(y_variance)
